@@ -72,6 +72,9 @@ cloudinary.config({
 // Database connection
 db.connect();
 
+
+
+
 // Set up routes with upload middleware
 router(app, upload);
 

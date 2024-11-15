@@ -19,6 +19,7 @@ const roomSchema = new Schema({
   typeRoom: { type: String, required: true },       // Loại phòng (Deluxe, Suite, ...)
   typeArea: { type: String, required: true },       // Loại khu vực (thành phố, biển, núi,...)
   quantity: { type: Number, required: true },       // Số lượng phòng
+  
 });
 
 // Mô hình Room

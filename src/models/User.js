@@ -11,9 +11,10 @@ const userSchema = new Schema({
   birthday: { type: Date },  // Ngày sinh
   createdAt: { type: Date, default: Date.now },  // Thời gian tạo
   updatedAt: { type: Date, default: Date.now },  // Thời gian cập nhật
+  favorites: [{ type: Schema.Types.ObjectId, ref: 'Room' }],  // Danh sách phòng yêu thích
 });
 
-// Mô hình User
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

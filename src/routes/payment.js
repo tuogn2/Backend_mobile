@@ -2,13 +2,12 @@ const express = require("express");
 const route = express.Router();
 const paymentController = require("../controller/paymentController");
 
-// Tạo mới một thanh toán
+// Tạo mới một thanh toán (Payment creation)
 route.post("/", paymentController.createPayment);
 
-// Lấy tất cả thanh toán của người dùng
-route.get("/:userId", paymentController.getUserPayments);
+// Xử lý phản hồi từ VNPay (Handle VNPay callback)
+route.get("/return", paymentController.handleVNPayResponse);
 
-// Cập nhật trạng thái thanh toán
-route.put("/status", paymentController.updatePaymentStatus);
+
 
 module.exports = route;

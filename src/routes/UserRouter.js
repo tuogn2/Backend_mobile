@@ -12,4 +12,7 @@ route.put("/change-password/:id", userController.changePassword);
 // Cập nhật thông tin người dùng (bao gồm cập nhật ảnh đại diện)
 route.put("/change-infor/:id", upload.single("avt"), userController.updateUser);
 
+route.put("/add-favorite/:userid/:roomId", userController.likeRoom);
+route.put("/remove-favorite/:userid/:roomId", userController.unlikeRoom);
+
 module.exports = route;

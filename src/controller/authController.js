@@ -50,7 +50,7 @@ class UserController {
 
     try {
       // Tìm người dùng qua email
-      const user = await User.findOne({ email });
+      const user = await User.findOne({ email })
       if (!user) {
         return res.status(400).json({ message: "Email hoặc mật khẩu không đúng" });
       }
@@ -76,7 +76,7 @@ class UserController {
 
     try {
       // Tìm người dùng qua số điện thoại
-      const user = await User.findOne({ phone });
+      const user = await User.findOne({ phone })
       if (!user) {
         return res.status(400).json({ message: "Số điện thoại hoặc mật khẩu không đúng" });
       }

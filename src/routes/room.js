@@ -4,11 +4,14 @@ const roomController = require("../controller/RoomController");
 
 // Thêm phòng mới
 route.post("/", roomController.addRoom);
-
+route.get("/search", roomController.searchRooms);
 // Lấy tất cả phòng
+route.get("/:roomId", roomController.getRoomById);
+// Lấy phòng theo thể loại
+route.get("/type/:typeRoom/:userid", roomController.getRoomsByType);
 route.get("/", roomController.getAllRooms);
 
-// Lấy phòng theo thể loại
-route.get("/type/:typeRoom", roomController.getRoomsByType);
+route.post("/get-rooms-by-ids", roomController.getRoomsByIds);
+
 
 module.exports = route;
