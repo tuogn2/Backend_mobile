@@ -31,6 +31,7 @@ const io = socketIo(server, {
       "http://192.168.1.13:8081",
       "exp://192.168.1.13:8081",
       "http://localhost:8081",
+      "http://localhost:3000",
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -54,6 +55,7 @@ app.use(
       "http://192.168.1.13:8081",
       "exp://192.168.1.13:8081",
       "http://localhost:8081",
+      "http://localhost:3000",
     ],
     credentials: true,
   })
@@ -71,9 +73,6 @@ cloudinary.config({
 
 // Database connection
 db.connect();
-
-
-
 
 // Set up routes with upload middleware
 router(app, upload);

@@ -13,5 +13,9 @@ route.get("/", roomController.getAllRooms);
 
 route.post("/get-rooms-by-ids", roomController.getRoomsByIds);
 
+route.get(
+  "/search/area-price-range",
+  roomController.searchRoomsByAreaAndPriceRange
+);
 
 module.exports = route;
